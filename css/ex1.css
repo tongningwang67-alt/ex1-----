@@ -14,7 +14,7 @@ body{
 nav{
     background: #f0f6f5;      
     padding: 15px 0;          
-
+}
 /* 導覽列裡面的三個色塊按鈕 */
 nav a{
     background: #ffbc04;       
@@ -29,7 +29,7 @@ nav a{
     /* 為 NAV 色塊按鈕加上柔和的陰影 */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
     transition: transform 0.2s, box-shadow 0.2s; 
-
+}
 /* 導覽列按鈕滑鼠懸浮效果 */
 nav a:hover{
     background: #fefae0;        
