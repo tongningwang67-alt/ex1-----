@@ -18,7 +18,7 @@ nav{
 
 /* 導覽列裡面的三個色塊按鈕 */
 nav a{
-    background: #00ff9d;        /* 按鈕背景顏色（橘紅色） */
+    background: #ffbc04;        /* 按鈕背景顏色（橘紅色） */
     padding: 15px 25px;         /* 按鈕內距 */
     display: inline-block;      /* 讓按鈕可以水平並排 */
     color: #fefae0;             /* 按鈕文字顏色 */
