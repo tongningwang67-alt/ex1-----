@@ -1,0 +1,112 @@
+body{
+    text-align: center;         /* 文字置中 */
+    
+    /* 背景圖片：請確認 bg.jpg 存在，或換成您的真實檔名 */
+    background: url('bg.jpg') no-repeat center center fixed;
+    background-size: cover;     
+    
+    color: #f5fffd;             /* 預設文字顏色 */
+    padding: 0;                 /* 消除內邊距 */
+    margin: 0;                  /* 消除外邊距，貼齊視窗邊緣 */
+}
+
+/* nav 導覽列容器 */
+nav{
+    background: #f0f6f5;        /* 長條底色：粉綠/粉藍色 */
+    padding: 15px 0;            /* 上下留出空間，讓長條與按鈕之間有空隙感 */
+}
+
+/* 導覽列裡面的三個色塊按鈕 */
+nav a{
+    background: #00ff9d;        /* 按鈕背景顏色（橘紅色） */
+    padding: 15px 25px;         /* 按鈕內距 */
+    display: inline-block;      /* 讓按鈕可以水平並排 */
+    color: #fefae0;             /* 按鈕文字顏色 */
+    text-decoration: none;      /* 移除底線 */
+    
+    margin: 0 10px;             /* 左右留白：讓三個色塊按鈕之間彼此有空隙 */
+    border-radius: 12px;        /* 按鈕圓角尺寸 */
+    
+    /* 為 NAV 色塊按鈕加上柔和的陰影 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s, box-shadow 0.2s; /* 讓滑鼠移上去時過渡更平滑 */
+}
+
+/* 導覽列按鈕滑鼠懸浮效果 */
+nav a:hover{
+    background: #fefae0;        /* 移上去時變淺米黃色 */
+    color: #8edaea;             /* 移上去時文字變棕色 */
+    transform: translateY(-2px); /* 懸浮時稍微往上浮起一點點 */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* 懸浮時陰影變深、擴散 */
+}
+
+/* section 內容區塊 */
+section{
+    width: 80%;                 /* 區塊寬度設為 80% */
+    margin: 30px auto;          /* 上下留白，左右 auto 讓區塊置中 */
+    text-align: center;         /* 確保內部元素置中 */
+}
+
+/* article 卡片區塊：改回一般矩形並加上圓角與水平並排 + 陰影 */
+article{
+    display: inline-block;      /* 讓三個卡片水平並排 */
+    vertical-align: top;        /* 頂部對齊 */
+    width: 220px;               /* 卡片固定寬度 */
+    margin: 15px;               /* 卡片間距 */
+    background: #ffffff;        /* 卡片背景為白色 */
+    
+    border-radius: 16px;        /* 一般矩形的大圓角尺寸 */
+    border: solid 2px rgba(121, 47, 247, 0.4); /* 棕色半透明邊框 */
+    overflow: hidden;           /* 隱藏超出圓角的內容 */
+    
+    /* 為每個卡片加上漂亮的立體陰影 */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* 卡片內的圖片 */
+article img{
+    width: 70%;                 /* 圖片寬度佔卡片 70% */
+    border-radius: 50%;         /* 圖片本身保持圓形 */
+    margin-top: 10px;
+}
+
+/* 卡片內的連結 */
+article a{
+    display: block;             /* 讓連結區塊滿版 */
+    color: #3925bc;             /* 文字顏色為棕色 */
+    background: #ffffff;        /* 背景為白色 */
+    text-decoration: none;      /* 移除底線 */
+    padding-bottom: 20px;       /* 下方留白 */
+}
+
+/* 卡片連結懸浮效果 */
+article a:hover{
+    color: #fefefe;             /* 文字變近純白 */
+    background: #92cedb;        /* 背景變棕色 */
+}
+
+/* 卡片連結點擊瞬間效果 */
+article a:active{
+    color: #ffffff;             /* 文字變純白 */
+    background: #DDA15E;        /* 背景變淺棕色 */
+}
+
+/* ==========================================
+   獨立卡片（article）的抖動動畫設定
+   ========================================== */
+
+/* 定義名為 shake 的抖動動畫 */
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    20% { transform: translate(-3px, 0px) rotate(-1deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+/* 改成：當滑鼠靠近特定的「某一個 article 卡片」時，才讓該卡片獨立抖動 */
+article:hover {
+    animation: shake 0.4s;              /* 執行 shake 動畫，每次 0.4 秒 */
+    animation-iteration-count: infinite; /* 滑鼠停在哪張卡片，哪張就持續抖動 */
+}
