@@ -2,7 +2,7 @@ body{
     text-align: center;         /* 文字置中 */
     
     /* 背景圖片：請確認 bg.jpg 存在，或換成您的真實檔名 */
-    background: url('bg.jpg') no-repeat center center fixed;
+    background: url("../images/bg.jpg") no-repeat center center fixed;
     background-size: cover;     
     
     color: #f5fffd;             /* 預設文字顏色 */
